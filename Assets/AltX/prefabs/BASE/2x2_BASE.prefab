@@ -181,7 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eba0227ef8819b42b3e274ac4985da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockColor: {r: 0, g: 0, b: 0, a: 0}
   blockSurface: {fileID: 163738694212723920}
+  blockCollider: {fileID: 7417145851792942186}
+  blockPegs: {fileID: 163738694212723908}
+  blockBody: {fileID: 0}
   col: {fileID: 0}
   defaultMaterial: {fileID: 0}
   highlightMaterial: {fileID: 2100000, guid: 37090736a0ac3c448b713cb54435f9a3, type: 2}
