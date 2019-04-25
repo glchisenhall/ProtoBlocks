@@ -3,8 +3,8 @@
 ![WIP](https://camo.githubusercontent.com/96997bf4724da51b7b3bd96d341a0c1efb2b38ab/68747470733a2f2f756e706b672e636f6d2f76767769702f5749502e737667)
 [![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
 [![Join the chat at https://discord.gg/5zH8hVx](https://img.shields.io/badge/discord-join%20chat-7289DA.svg)](https://discord.gg/kVgDu9f)
-[![Star](http://githubbadges.com/star.svg?user=Altered Existence&repo=ProtoBlocks&style=default)](https://github.com/Altered Existence/ProtoBlocks)
-[![Fork](http://githubbadges.com/fork.svg?user=Altered Existence&repo=ProtoBlocks&style=default)](https://github.com/Altered Existence/ProtoBlocks/fork)
+[![Star](http://githubbadges.com/star.svg?user=altered-existence&repo=ProtoBlocks&style=default)](https://github.com/altered-existence/ProtoBlocks)
+[![Fork]("http://githubbadges.com/fork.svg?user=altered-existence&repo=ProtoBlocks&style=default")](https://github.com/altered-existence/ProtoBlocks/fork)
 
 -----
 
