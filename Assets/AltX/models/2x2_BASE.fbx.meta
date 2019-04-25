@@ -11,6 +11,7 @@ ModelImporter:
     100010: Point
     100012: Point.001
     100014: Point.002
+    100016: peg
     400000: //RootNode
     400002: BLOCK_BASE_2x2
     400004: block_flattop
@@ -19,19 +20,24 @@ ModelImporter:
     400010: Point
     400012: Point.001
     400014: Point.002
+    400016: peg
     2000000: Camera
     2100000: Color_MAIN
     2300000: BLOCK_BASE_2x2
     2300002: block_flattop
     2300004: pin
     2300006: //RootNode
+    2300008: peg
     3300000: BLOCK_BASE_2x2
     3300002: block_flattop
     3300004: pin
     3300006: //RootNode
+    3300008: peg
     4300000: BLOCK_BASE_2x2
     4300002: block_flattop
     4300004: pin
+    4300006: BLOCK_2x2
+    4300008: peg
     10800000: Point
     10800002: Point.001
     10800004: Point.002

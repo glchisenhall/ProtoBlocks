@@ -1,8 +1,8 @@
 # **ProtoBlocks** ![ProtoBlocks](Assets/AltX/ui/icon_64.png)
-### Building block sandbox
+### Building-Block Sandbox
 ![WIP](https://camo.githubusercontent.com/96997bf4724da51b7b3bd96d341a0c1efb2b38ab/68747470733a2f2f756e706b672e636f6d2f76767769702f5749502e737667)
 [![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
-[![Join the chat at https://discord.gg/5zH8hVx](https://img.shields.io/badge/discord-join%20chat-7289DA.svg)](https://discord.gg/kVgDu9f)
+[![Join the chat at https://discord.gg/5zH8hVx](https://img.shields.io/badge/discord-join%20chat-7289DA.svg)](https://discord.gg/KCkwygQ)
 
 -----
 
@@ -54,7 +54,7 @@
     - SteamWorks API for .NET Framework (TBD)
 
 
-  - **FizzySteamMirror** - ([Github](https://github.com/Raystorms/FizzySteamyMirror)) - ([Download](https://github.com/Raystorms/FizzySteamyMirror/releases/latest))
+- **FizzySteamMirror** - ([Github](https://github.com/Raystorms/FizzySteamyMirror)) - ([Download](https://github.com/Raystorms/FizzySteamyMirror/releases/latest))
    - SteamWorks Extension for Mirror (TBD)
 
 ### Experimental:
