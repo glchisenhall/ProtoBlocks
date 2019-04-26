@@ -181,14 +181,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eba0227ef8819b42b3e274ac4985da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockToSpawn: {fileID: 0}
   blockColor: {r: 0, g: 0, b: 0, a: 0}
   blockSurface: {fileID: 163738694212723920}
   blockCollider: {fileID: 7417145851792942186}
   blockPegs: {fileID: 163738694212723908}
   blockBody: {fileID: 0}
-  defaultMaterial: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: 76d992449ec74a9499b88ddd1d9d518a, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 37090736a0ac3c448b713cb54435f9a3, type: 2}
-  trans: {fileID: 0}
+  trans: {fileID: 163738694213089524}
 --- !u!1 &163738694212723924
 GameObject:
   m_ObjectHideFlags: 0
