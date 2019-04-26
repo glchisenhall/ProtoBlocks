@@ -1,6 +1,0 @@
-[submodule "RTS_Camera"]
-	path = Assets/RTS_Camera
-	url = git@github.com:altered-existence/RTS_Camera
-[submodule "XInputDotNet"]
-	path = Assets/XInputDotNet
-	url = git@github.com:speps/XInputDotNet
