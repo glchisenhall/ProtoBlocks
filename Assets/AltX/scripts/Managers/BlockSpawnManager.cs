@@ -2,26 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AltX
+namespace AltX.scripts.Managers
 {
     public class BlockSpawnManager : MonoBehaviour
     {
-        public GameObject blockToSpawn; //from BlockSelectionManager
-
-        public void PlaceSelectedBlock()
+        public void BlockDestruct(GameObject gameObject)
         {
-
+                Destroy(gameObject);
         }
-        // Start is called before the first frame update
-        void Start()
+        public static void PlaceSelectedBlock(GameObject blockToSpawn, Vector3 pos, Transform parent)
         {
-
+            if (blockToSpawn != null)
+            {
+                Transform b = Instantiate<GameObject>(blockToSpawn, pos, new Quaternion(0f, 0f, 0f, 0f), parent).transform;
+                b.localScale = new Vector3(1f, 1f, 1f);
+            }
         }
-
-        // Update is called once per frame
-        void Update()
+        public static void PlaceBaseBlock(GameObject baseBlock)
         {
-
+            if (baseBlock != null)
+            {
+                Transform b = Instantiate<GameObject>(baseBlock, new Vector3(0f, 0f, 0f), new Quaternion(0f, 0f, 0f, 0f)).transform;
+                b.localScale = new Vector3(1f, 1f, 1f);
+            }
         }
     }
 }
