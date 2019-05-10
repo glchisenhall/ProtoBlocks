@@ -3,32 +3,61 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace AltX.scripts.Managers
+namespace AltX.Manager
 {
     public class BlockSettings : MonoBehaviour
     {
-        UI_Manager UI_Manager;
+
+        UIManager uiManager;
+        GameManager gameManager;
+        public bool isBaseBlock;
         public GameObject BlockToSpawn;
         public Color blockColor;
         public GameObject blockSurface;
+        public GameObject blockBody;
 
         //[HideInInspector]
         public Material defaultMaterial;
         //[HideInInspector]
         public Material highlightMaterial;
+        //[HideInInspector]
+        public Material paintedMaterial;
 
 
 
         // Start is called before the first frame update
-        void Start()
+        public void Start()
         {
-            UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
+            if (gameObject.tag == "BaseBlock")
+            {
+                isBaseBlock = true;
+            }
+            else
+            {
+                isBaseBlock = false;
+            }
+            uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
             defaultMaterial = gameObject.GetComponent<Renderer>().material;
         }
 
         private void OnMouseDown()
         {
-            BlockSpawnManager.PlaceSelectedBlock(BlockToSpawn, transform.position, transform);
+            if (Input.GetButtonDown("fire0"))
+            {
+
+            }
+            if (Input.GetButtonDown("fire1"))
+            {
+
+            }
+            if (gameManager.isBuildMode)
+            {
+                BlockSpawnManager.PlaceSelectedBlock(BlockToSpawn, transform.position, transform);
+            }
+            if (gameManager.isPaintMode)
+            {
+                blockBody.GetComponent<Renderer>().material = paintedMaterial;
+            }
         }
 
         // Update is called once per frame
@@ -40,7 +69,7 @@ namespace AltX.scripts.Managers
         /// </summary>
         private void OnMouseEnter()
         {
-            BlockToSpawn = UI_Manager.GetSelectedBlock();
+            BlockToSpawn = uiManager.GetSelectedBlock();
             gameObject.GetComponent<Renderer>().material = highlightMaterial;
             //blockPegs.GetComponent<Renderer>().material = highlightMaterial;
         }

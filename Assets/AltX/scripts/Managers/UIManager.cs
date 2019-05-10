@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace AltX.scripts.Managers
+namespace AltX.Manager
 {
-    public class UI_Manager : MonoBehaviour
+    public class UIManager : MonoBehaviour
     {
         private GameObject selectedBlock;
-        
         private GameObject baseBlock;
+        public Material selectedPaintMaterial;
+
         public GameObject SelectedBlock { get => selectedBlock; set => selectedBlock = value; }
         public GameObject BaseBlock { get => baseBlock; set => baseBlock = value; }
+        public Material SelectedPaintMaterial { get => selectedPaintMaterial; set => selectedPaintMaterial = value; }
+        public Material BlockPaintMaterial;
 
+
+        // Base Blocks
         public GameObject GetBaseBlock()
         {
             return BaseBlock;
@@ -23,7 +28,11 @@ namespace AltX.scripts.Managers
             BaseBlock = value;
             PlaceBase(BaseBlock);
         }
-
+        public static void PlaceBase(GameObject baseBlock)
+        {
+            BlockSpawnManager.PlaceBaseBlock(baseBlock);
+        }
+        // Blocks
         public GameObject GetSelectedBlock()
         {
             return SelectedBlock;
@@ -33,10 +42,14 @@ namespace AltX.scripts.Managers
         {
             SelectedBlock = value;
         }
-
-        public static void PlaceBase(GameObject baseBlock)
+        // Material Painter
+        public Material GetSelectedPaintMaterial()
         {
-            BlockSpawnManager.PlaceBaseBlock(baseBlock);
+            return BlockPaintMaterial;
+        }
+        public void SetSelectedPaintMaterial(Material value)
+        {
+            selectedPaintMaterial = value;
         }
     }
 }

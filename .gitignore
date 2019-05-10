@@ -7,11 +7,11 @@
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # [Aa]ssets/AssetStoreTools*
-Assets/Plugins
-Assets/RTS_Camera
-Assets/SampleScenes
-Assets/Scenes
-Assets/Standard Assets
+Assets/Plugins/RTS_Camera
+Assets/Plugins/GitHub
+Assets/Plugins/AltX-ColorPicker
+Assets/AltX/textures/texturelib.com
+
 # Visual Studio cache directory
 .vs/
 
