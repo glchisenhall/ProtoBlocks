@@ -1,33 +1,37 @@
-﻿using AltX;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
-namespace AltX.Manager
+namespace AltX.Managers
 {
     public class GameManager : MonoBehaviour
     {
-        UIManager uiManager;
-        public bool isBuildMode;
-        public bool isPaintMode;
-        // Start is called before the first frame update
-        void Start()
+        //UIManager uiManager;
+        private static bool isBuildMode;
+        private static bool isPaintMode;
+
+        public static bool GetIsBuildMode()
         {
-            CheckMode();
-        }
-        public void CheckMode()
-        {
-            if (isBuildMode)
-            {
-                isPaintMode = false;
-            }
+            return isBuildMode;
         }
 
-
-        // Update is called once per frame
-        void Update()
+        public void SetIsBuildMode(bool value)
         {
+            isBuildMode = value;
+        }
 
+        public static bool GetIsPaintMode()
+        {
+            return isPaintMode;
+        }
+
+        public void SetIsPaintMode(bool value)
+        {
+            isPaintMode = value;
+        }
+        private void Start()
+        {
+            isBuildMode = true;
+            isPaintMode = false;
         }
     }
 }

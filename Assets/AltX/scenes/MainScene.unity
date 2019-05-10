@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427176, b: 0.56452405, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedBlock
         m_Mode: 2
         m_Arguments:
@@ -1664,7 +1664,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 615231610}
-  - component: {fileID: 615231611}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -1689,20 +1688,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &615231611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615231609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10dddbd95208b94f8e94cdf41f72b88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedPaintMaterial: {fileID: 0}
-  BlockPaintMaterial: {fileID: 0}
 --- !u!1 &617916456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,11 +1846,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedPaintMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 4a43f3b41ae96a840907a033c66130c4,
+          m_ObjectArgument: {fileID: 2100000, guid: 82c72a789be5db0428a2c43814089863,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -2262,7 +2247,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedPaintMaterial
         m_Mode: 2
         m_Arguments:
@@ -2466,7 +2451,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedPaintMaterial
         m_Mode: 2
         m_Arguments:
@@ -2597,7 +2582,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetBaseBlock
         m_Mode: 2
         m_Arguments:
@@ -2609,7 +2594,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetBaseBlock
         m_Mode: 2
         m_Arguments:
@@ -4154,6 +4139,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210086169}
   m_CullTransparentMesh: 0
+--- !u!1001 &1305678453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 389023317315119381, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_Name
+      value: ProtoBlockSceneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754971823831331894, guid: 7957f0bbf442358409755fa254590cdb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7957f0bbf442358409755fa254590cdb, type: 3}
 --- !u!1 &1311400281
 GameObject:
   m_ObjectHideFlags: 0
@@ -4421,178 +4475,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411635881}
   m_CullTransparentMesh: 0
---- !u!1 &1433827019
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 120296, guid: 407bd5cbe8c43334bb1b25c0f3826974,
-    type: 3}
-  m_PrefabInstance: {fileID: 1470042463}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1433827025}
-  - component: {fileID: 1433827024}
-  - component: {fileID: 1433827023}
-  - component: {fileID: 1433827022}
-  - component: {fileID: 1433827021}
-  - component: {fileID: 1433827020}
-  m_Layer: 0
-  m_Name: RTS_Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1433827020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974,
-    type: 3}
-  m_PrefabInstance: {fileID: 1470042463}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433827019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ef8c68bade09b41aca258d42a632f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastTab: 2
-  movementSettingsFoldout: 1
-  zoomingSettingsFoldout: 0
-  rotationSettingsFoldout: 1
-  heightSettingsFoldout: 1
-  mapLimitSettingsFoldout: 1
-  targetingSettingsFoldout: 1
-  inputSettingsFoldout: 1
-  useFixedUpdate: 0
-  is2d: 0
-  keyboardMovementSpeed: 10
-  screenEdgeMovementSpeed: 3
-  followingSpeed: 5
-  rotationSped: 3
-  panningSpeed: 25
-  mouseRotationSpeed: 100
-  autoHeight: 1
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 55
-  maxHeight: 15
-  minHeight: 10
-  heightDampening: 5
-  keyboardZoomingSensitivity: 2
-  scrollWheelZoomingSensitivity: 25
-  limitMap: 1
-  limitX: 100
-  limitY: 100
-  targetFollow: {fileID: 0}
-  targetOffset: {x: 0, y: 0, z: 0}
-  useScreenEdgeInput: 1
-  screenEdgeBorder: 25
-  useKeyboardInput: 1
-  horizontalAxis: Horizontal
-  verticalAxis: Vertical
-  usePanning: 1
-  panningKey: 325
-  useKeyboardZooming: 1
-  zoomInKey: 101
-  zoomOutKey: 113
-  useScrollwheelZooming: 1
-  zoomingAxis: Mouse ScrollWheel
-  useKeyboardRotation: 1
-  rotateRightKey: 120
-  rotateLeftKey: 122
-  useMouseRotation: 1
-  mouseRotationKey: 324
---- !u!114 &1433827021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 11488424, guid: 407bd5cbe8c43334bb1b25c0f3826974,
-    type: 3}
-  m_PrefabInstance: {fileID: 1470042463}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433827019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20048c13a5d194941bac6cd566a5e468, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetsTag: target
---- !u!81 &1433827022
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8165074, guid: 407bd5cbe8c43334bb1b25c0f3826974,
-    type: 3}
-  m_PrefabInstance: {fileID: 1470042463}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433827019}
-  m_Enabled: 1
---- !u!124 &1433827023
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 12455804, guid: 407bd5cbe8c43334bb1b25c0f3826974,
-    type: 3}
-  m_PrefabInstance: {fileID: 1470042463}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433827019}
-  m_Enabled: 1
---- !u!20 &1433827024
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2056488, guid: 407bd5cbe8c43334bb1b25c0f3826974,
-    type: 3}
-  m_PrefabInstance: {fileID: 1470042463}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433827019}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 0
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1433827025
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 459968, guid: 407bd5cbe8c43334bb1b25c0f3826974,
-    type: 3}
-  m_PrefabInstance: {fileID: 1470042463}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433827019}
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 6.75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &1452325529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,22 +4674,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RTS_Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
-      propertyPath: limitX
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
-      propertyPath: limitY
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
-      propertyPath: lastTab
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
-      propertyPath: keyboardMovementSpeed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 459968, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4851,6 +4717,22 @@ PrefabInstance:
     - target: {fileID: 459968, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
+      propertyPath: limitX
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
+      propertyPath: limitY
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
+      propertyPath: lastTab
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455738, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
+      propertyPath: keyboardMovementSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9275010, guid: 407bd5cbe8c43334bb1b25c0f3826974, type: 3}
@@ -5653,11 +5535,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedPaintMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 4a43f3b41ae96a840907a033c66130c4,
+          m_ObjectArgument: {fileID: 2100000, guid: 76d992449ec74a9499b88ddd1d9d518a,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -5934,7 +5816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedBlock
         m_Mode: 2
         m_Arguments:
@@ -6261,11 +6143,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedPaintMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 4a43f3b41ae96a840907a033c66130c4,
+          m_ObjectArgument: {fileID: 2100000, guid: 11ea9879af6b89940a61b17f18a34573,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -6427,7 +6309,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedPaintMaterial
         m_Mode: 2
         m_Arguments:
@@ -6557,7 +6439,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedPaintMaterial
         m_Mode: 2
         m_Arguments:
@@ -6920,11 +6802,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedPaintMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 4a43f3b41ae96a840907a033c66130c4,
+          m_ObjectArgument: {fileID: 2100000, guid: 263f32a4820222b4286576d3a1b83885,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -7129,11 +7011,11 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 615231611}
+      - m_Target: {fileID: 0}
         m_MethodName: SetSelectedPaintMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 4a43f3b41ae96a840907a033c66130c4,
+          m_ObjectArgument: {fileID: 2100000, guid: 37090736a0ac3c448b713cb54435f9a3,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -7187,11 +7069,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2942031150907793743, guid: 2f1dc420488a8144a823bfabf8e3eef6,
-        type: 3}
-      propertyPath: m_Name
-      value: Grass_54x54
-      objectReference: {fileID: 0}
     - target: {fileID: 3543299232130083291, guid: 2f1dc420488a8144a823bfabf8e3eef6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7246,6 +7123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942031150907793743, guid: 2f1dc420488a8144a823bfabf8e3eef6,
+        type: 3}
+      propertyPath: m_Name
+      value: Grass_54x54
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f1dc420488a8144a823bfabf8e3eef6, type: 3}
