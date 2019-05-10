@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5209475204106731461}
   - component: {fileID: 710641818}
   - component: {fileID: 710641821}
+  - component: {fileID: 710641822}
   m_Layer: 0
   m_Name: ProtoBlockSceneManager
   m_TagString: Untagged
@@ -67,5 +68,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ea05002c2ad8d84b818f61c4cc43988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &710641822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389023317315119381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7189ab8cd85528448820c1c30a50926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
