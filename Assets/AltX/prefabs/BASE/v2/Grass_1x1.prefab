@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 2250689823430129607}
   - component: {fileID: 2250689823429359591}
   - component: {fileID: 2250689823428228391}
-  - component: {fileID: 6299484891500046712}
+  - component: {fileID: 8658571829616226724}
   - component: {fileID: 7222188385602100620}
   m_Layer: 0
   m_Name: block_flattop
@@ -188,7 +188,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6299484891500046712
+--- !u!114 &8658571829616226724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,10 +197,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2250689823430159335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eba0227ef8819b42b3e274ac4985da5, type: 3}
+  m_Script: {fileID: 11500000, guid: 97a202e35c172664595455aa25d606cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBaseBlock: 1
   BlockToSpawn: {fileID: 0}
   blockColor: {r: 0, g: 0, b: 0, a: 0}
   blockSurface: {fileID: 2250689823430159335}
@@ -208,6 +207,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 96f4eaf9c33cfaf43acba4c30a46b425, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 37090736a0ac3c448b713cb54435f9a3, type: 2}
   paintedMaterial: {fileID: 2100000, guid: 96f4eaf9c33cfaf43acba4c30a46b425, type: 2}
+  offset: 0
 --- !u!65 &7222188385602100620
 BoxCollider:
   m_ObjectHideFlags: 0
