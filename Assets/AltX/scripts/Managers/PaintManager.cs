@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace AltX.Managers
 {
-    public class PaintManager
+    public class PaintManager : MonoBehaviour
     {
         #region ///Properties
         private static Material selectedPaintMaterial;
@@ -16,16 +16,16 @@ namespace AltX.Managers
             return blockPaintMaterial;
         }
 
-        public static void SetBlockPaintMaterial(Material value)
+        public void SetBlockPaintMaterial(Material value)
         {
             blockPaintMaterial = value;
         }
-        public static Material GetSelectedPaintMaterial1()
+        public static Material GetSelectedPaintMaterial()
         {
             return selectedPaintMaterial;
         }
 
-        public static void SetSelectedPaintMaterial1(Material value)
+        public void SetSelectedPaintMaterial(Material value)
         {
             selectedPaintMaterial = value;
         }

@@ -29,7 +29,9 @@ namespace AltX.Managers
             }
             if (GameManager.GetIsPaintMode())
             {
-                blockBody.GetComponent<Renderer>().material = paintedMaterial;
+                paintedMaterial = PaintManager.GetBlockPaintMaterial();
+                gameObject.GetComponent<Renderer>().material = paintedMaterial;
+                defaultMaterial = paintedMaterial;
             }
         }
         /// <summary>
