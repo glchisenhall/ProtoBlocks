@@ -21,7 +21,7 @@
 -----
 ### Developed by:
 
-**Altered Existence** - [https://altered-existence.github.io/](https://altered-existence.github.io/)
+**Altered Existence** - [altered-existence.github.io](https://altered-existence.github.io/)
 
 **Topher Lee** - [http://topherlee513.github.io/](http://topherlee513.github.io/)
   - [GitHub](https://github.com/TopherLee513)
@@ -31,29 +31,31 @@
   - [Twitch](https://www.twitch.tv/topherlee513)
 
 
-**Gary Chisenhall**
+**Gary Chisenhall** - [pcpi.theworkpc.com](https://pcpi.theworkpc.com)
   - [GitHub](https://github.com/glchisenhall)
-  -----
-### Music by:
-- **John Leonard French** - Ultimate Game Music Collection
-  - [johnleonardfrench.com](https://johnleonardfrench.com/)
+  - [Steam](https://steamcommunity.com/id/gchisenhall/)
+  - [Facebook](https://www.facebook.com/garyleechisenhalljr)
+  - [Twitter](https://twitter.com/ChisenhallGary)
+  - [Twitch](https://www.twitch.tv/sou77e55one)
 
 ----
-## Dependency Tracker
+## Dependency Tracker:
 
-### Originals / Forks
+### Required:
 - **RTS Camera** - [Github](https://github.com/altered-existence/RTS_Camera)
   - Forked from: [https://github.com/densylkin/RTS_Camera](https://github.com/densylkin/RTS_Camera)
 
+
+- **XInputDotNet** - ([Github](https://github.com/altered-existence/XInputDotNet)) - ([Download](https://github.com/altered-existence/XInputDotNet/releases/latest))
+   - Forked from: [https://github.com/speps/XInputDotNet](https://github.com/speps/XInputDotNet)
+
+
 ### Github Packages
-
-- **XInputDotNet** - ([Github](https://github.com/speps/XInputDotNet)) - ([Download](https://github.com/speps/XInputDotNet/releases/latest))
-    - XInput Controller Support
-
-### Optional:
-
 - **Github for Unity** - ([Github](https://github.com/github-for-unity/Unity)) - ([Download](https://github.com/github-for-unity/Unity/releases/latest)) - ([Asset Store](https://assetstore.unity.com/packages/tools/version-control/github-for-unity-118069))
-    - Github Support for Unity Editor
+  - Github Support for Unity Editor
+
+
+
 
 
 ### Experimental:

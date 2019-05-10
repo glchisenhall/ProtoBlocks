@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AltX.scripts.Managers
+namespace AltX.Manager
 {
     public class BlockSpawnManager : MonoBehaviour
     {
