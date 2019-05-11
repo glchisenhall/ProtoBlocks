@@ -116,6 +116,10 @@ namespace PCPi.Scripts.Editor
                             {
                                 t.tag = "BaseBlock";
                             }
+                            else
+                            {
+                                t.tag = "Block";
+                            }
                             previousTransform = newTransform.gameObject;
                         }
                         obj = previousTransform;

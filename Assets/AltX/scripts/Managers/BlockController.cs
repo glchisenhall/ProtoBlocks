@@ -10,14 +10,29 @@ namespace AltX.Managers
     {
         //private BlockManager BlockManager;
         //private GameManager gameManager;
-        private bool isBaseBlock;
+        public static bool isBaseBlock;
         public float offset;
-
+        private GameObject parent;
         private void Awake()
         {
             //BlockManager = GameObject.Find("ProtoBlockSceneManager").GetComponent<BlockManager>();
             //gameManager = BlockManager.GetComponent<GameManager>();
-            GetBaseValue();
+            parent = gameObject.GetComponentInParent<Collider>().gameObject;
+            isBaseBlock = GetBaseValue();
+        }
+        private void OnTriggerEnter(Collider other)
+        {
+            //if (Input.GetMouseButtonDown(1))
+            //{
+            //    if (!GetBaseValue())
+            //    {
+            //        BlockSpawnManager.BlockDestruct(this.GetComponentInChildren<Transform>().gameObject);
+            //    }
+            //    else
+            //    {
+            //        return;
+            //    }
+            //}
         }
         private void OnMouseDown()
         {
@@ -41,6 +56,7 @@ namespace AltX.Managers
         {
             BlockToSpawn = BlockManager.GetSelectedBlock();
             gameObject.GetComponent<Renderer>().material = highlightMaterial;
+
         }
         /// <summary>
         /// Deactivates highlighter material
@@ -49,16 +65,20 @@ namespace AltX.Managers
         {
             gameObject.GetComponent<Renderer>().material = defaultMaterial;
         }
-        private void GetBaseValue()
+        public bool GetBaseValue()
         {
             if (gameObject.tag == "BaseBlock")
             {
-                isBaseBlock = true;
+                return true;
             }
             else
             {
-                isBaseBlock = false;
+                return false;
             }
         }
+        //private void OnDestroy()
+        //{
+        //    Debug.Log("Error");
+        //}
     }
 }
