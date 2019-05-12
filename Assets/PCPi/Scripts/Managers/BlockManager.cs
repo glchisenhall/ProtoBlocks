@@ -13,6 +13,7 @@ namespace PCPi.scripts.Managers
     [AddComponentMenu("PCPi/ProtoBlock Scene Manager")]
     public class BlockManager : MonoBehaviour
     {
+
         #region /// Properties
         private static GameObject selectedBlock;
         
@@ -42,5 +43,6 @@ namespace PCPi.scripts.Managers
             SelectedBlock = value;
         }
         #endregion
+
     }
 }

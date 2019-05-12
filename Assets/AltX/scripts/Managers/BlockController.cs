@@ -8,45 +8,25 @@ namespace AltX.Managers
     /// </summary>
     public class BlockController : BlockSettings
     {
-        //private BlockManager BlockManager;
-        //private GameManager gameManager;
         public static bool isBaseBlock;
         public float offset;
         private GameObject parent;
         private void Awake()
         {
-            //BlockManager = GameObject.Find("ProtoBlockSceneManager").GetComponent<BlockManager>();
-            //gameManager = BlockManager.GetComponent<GameManager>();
             parent = gameObject.GetComponentInParent<Collider>().gameObject;
             isBaseBlock = GetBaseValue();
-        }
-        private void OnTriggerEnter(Collider other)
-        {
-            //if (Input.GetMouseButtonDown(1))
-            //{
-            //    if (!GetBaseValue())
-            //    {
-            //        BlockSpawnManager.BlockDestruct(this.GetComponentInChildren<Transform>().gameObject);
-            //    }
-            //    else
-            //    {
-            //        return;
-            //    }
-            //}
         }
         private void OnMouseDown()
         {
             if (GameManager.GetIsBuildMode())
             {
                 BlockSpawnManager.PlaceSelectedBlock(BlockToSpawn, transform.position, transform);
-
-                //BlockSpawnManager.PlaceSelectedBlock(BlockToSpawn, transform.position, transform);
             }
             if (GameManager.GetIsPaintMode())
             {
-                paintedMaterial = PaintManager.GetBlockPaintMaterial();
-                gameObject.GetComponent<Renderer>().material = paintedMaterial;
-                defaultMaterial = paintedMaterial;
+                PaintedMaterial = PaintManager.GetBlockPaintMaterial();
+                gameObject.GetComponent<Renderer>().material = PaintedMaterial;
+                defaultMaterial = PaintedMaterial;
             }
         }
         /// <summary>

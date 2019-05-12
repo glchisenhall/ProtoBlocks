@@ -8,19 +8,21 @@
 #region /// USING
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Data;
+using Mono.Data.Sqlite;
 #endregion
-namespace PCPi.Scripts
+namespace PCPi.scripts
 {
     /// <summary>
     /// Blocklist Class for ProtoBlock Builder
     /// Creates Lists of ProtoBlock Editor creations
     /// </summary>
-    public class BlockList
+    public class BlockList 
     {
-        
+
         public List<Block> blocks = new List<Block>();
         private Block[] aGameObjects;
-
         public Block[] AGameObjects { get => aGameObjects; set => aGameObjects = value; }
         /// <summary>
         /// Block Structure
@@ -92,11 +94,24 @@ namespace PCPi.Scripts
                 height = height,
                 material = material,
                 highlightMaterial = highlightMaterial
-        };
+            };
+            //BlockDatabase.CreateBlockTable();
+            BlockDatabase.AddBlockToDatabase(
+                obj,
+                length,
+                width,
+                height,
+                material,
+                highlightMaterial,
+                pegCount);
             // Add new block to List
             AddBlockToList(b);
-            AGameObjects =  ListBlocks().ToArray();
+            AGameObjects = ListBlocks().ToArray();
+            //BlockDatabase.DebugBlockList();
         }
+
+        
+
         #endregion
         /// <summary>
         /// Adds blueprint to List
@@ -121,6 +136,7 @@ namespace PCPi.Scripts
         {
             AGameObjects = null;
             blocks = new List<Block>();
+            BlockDatabase.DeleteDatabaseTableContents();
         }
         /// <summary>
         /// Debug log 
@@ -129,11 +145,11 @@ namespace PCPi.Scripts
         public void PegCounter()
         {
             int count = 0;
-            if(AGameObjects != null)
-            foreach (Block m in AGameObjects)
-            {
-                count += m.pegCount;
-            }
+            if (AGameObjects != null)
+                foreach (Block m in AGameObjects)
+                {
+                    count += m.pegCount;
+                }
             Debug.Log(count);
         }
     }
