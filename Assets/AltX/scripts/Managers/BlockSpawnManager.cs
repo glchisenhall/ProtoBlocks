@@ -6,15 +6,25 @@
 /// Written by: Gary Chisenhall
 /// </summary>
 #region /// USING
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 #endregion
 namespace AltX.Managers
 {
     public class BlockSpawnManager : MonoBehaviour
     {
-        public void BlockDestruct(GameObject gameObject)
+        static List<GameObject> spawnList = new List<GameObject>();
+
+        private static GameObject[] SpawnPool { get; set; }
+
+        public static void BlockDestruct(GameObject gameObject)
         {
+            if (spawnList != null)
+            {
                 Destroy(gameObject);
+            }
         }
         public static void PlaceSelectedBlock(GameObject blockToSpawn, Vector3 pos, Transform parent)
         {
@@ -23,7 +33,9 @@ namespace AltX.Managers
                 Transform b = Instantiate<GameObject>(blockToSpawn, pos, blockToSpawn.transform.rotation, parent).transform;
                 b.transform.position = pos + new Vector3(0f, 2f, 0f);
                 b.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+                spawnList.Add(b.gameObject);
             }
+            SpawnPool = spawnList.ToArray();
         }
         public static void PlaceBaseBlock(GameObject baseBlock)
         {

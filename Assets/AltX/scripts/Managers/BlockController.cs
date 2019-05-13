@@ -8,30 +8,25 @@ namespace AltX.Managers
     /// </summary>
     public class BlockController : BlockSettings
     {
-        //private BlockManager BlockManager;
-        //private GameManager gameManager;
-        private bool isBaseBlock;
+        public static bool isBaseBlock;
         public float offset;
-
+        private GameObject parent;
         private void Awake()
         {
-            //BlockManager = GameObject.Find("ProtoBlockSceneManager").GetComponent<BlockManager>();
-            //gameManager = BlockManager.GetComponent<GameManager>();
-            GetBaseValue();
+            parent = gameObject.GetComponentInParent<Collider>().gameObject;
+            isBaseBlock = GetBaseValue();
         }
         private void OnMouseDown()
         {
             if (GameManager.GetIsBuildMode())
             {
                 BlockSpawnManager.PlaceSelectedBlock(BlockToSpawn, transform.position, transform);
-
-                //BlockSpawnManager.PlaceSelectedBlock(BlockToSpawn, transform.position, transform);
             }
             if (GameManager.GetIsPaintMode())
             {
-                paintedMaterial = PaintManager.GetBlockPaintMaterial();
-                gameObject.GetComponent<Renderer>().material = paintedMaterial;
-                defaultMaterial = paintedMaterial;
+                PaintedMaterial = PaintManager.GetBlockPaintMaterial();
+                gameObject.GetComponent<Renderer>().material = PaintedMaterial;
+                defaultMaterial = PaintedMaterial;
             }
         }
         /// <summary>
@@ -41,6 +36,7 @@ namespace AltX.Managers
         {
             BlockToSpawn = BlockManager.GetSelectedBlock();
             gameObject.GetComponent<Renderer>().material = highlightMaterial;
+
         }
         /// <summary>
         /// Deactivates highlighter material
@@ -49,16 +45,20 @@ namespace AltX.Managers
         {
             gameObject.GetComponent<Renderer>().material = defaultMaterial;
         }
-        private void GetBaseValue()
+        public bool GetBaseValue()
         {
             if (gameObject.tag == "BaseBlock")
             {
-                isBaseBlock = true;
+                return true;
             }
             else
             {
-                isBaseBlock = false;
+                return false;
             }
         }
+        //private void OnDestroy()
+        //{
+        //    Debug.Log("Error");
+        //}
     }
 }

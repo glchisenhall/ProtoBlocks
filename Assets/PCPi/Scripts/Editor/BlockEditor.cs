@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEditor;
 using PCPi.scripts.Managers;
 #endregion
-namespace PCPi.Scripts.Editor
+namespace PCPi.scripts.Editor
 {
     /// <summary>
     /// BlockEditor
@@ -266,7 +266,7 @@ namespace PCPi.Scripts.Editor
             if (debugger)
             {
                 GUILayout.Label("Quantity Of Blocks In List", EditorStyles.miniBoldLabel);
-                GUILayout.TextArea(blockList.ListBlocks().Count.ToString(), EditorStyles.helpBox);
+                //GUILayout.TextArea(blockList.ListBlocks().Count.ToString(), EditorStyles.helpBox);
                 if (GUILayout.Button("Peg Count"))
                 {
                     if (blockList != null)

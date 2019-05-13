@@ -12,7 +12,7 @@ using UnityEditor;
 using System;
 #endregion
 
-namespace PCPi.Scripts.Editor
+namespace PCPi.scripts
 {
     /// <summary>
     /// BlockBuilder Class for ProtoBlock Builder
@@ -20,8 +20,8 @@ namespace PCPi.Scripts.Editor
     public class BlockBuilder : MonoBehaviour
     {
         private const string altXPath = "Assets/AltX/scripts/Managers/";
-        private static MonoScript contains;
-        private static bool exists = false;
+        private static GameObject contains;
+        private static bool exists = true;
 
         #region /// Static Variables
         private static bool finished = false;
@@ -99,7 +99,7 @@ namespace PCPi.Scripts.Editor
                             newTransform = t;
                             t.transform.position = previousTransform.transform.position + offset;
                             
-                            FindAltX();
+                            //FindAltX();
 
                             if (exists)
                             {
@@ -115,6 +115,10 @@ namespace PCPi.Scripts.Editor
                             if (isBase)
                             {
                                 t.tag = "BaseBlock";
+                            }
+                            else
+                            {
+                                t.tag = "Block";
                             }
                             previousTransform = newTransform.gameObject;
                         }
@@ -235,6 +239,7 @@ namespace PCPi.Scripts.Editor
                                  + height.ToString()
                                  + "_protoblock";
         }
+#if UNITY_EDITOR
         /// <summary>
         /// Locate BlockController in ProtoBlocks Project
         /// </summary>
@@ -310,8 +315,8 @@ namespace PCPi.Scripts.Editor
                 return;
             }
         }
-        
-#endregion
 
+        #endregion
+#endif
     }
 }
