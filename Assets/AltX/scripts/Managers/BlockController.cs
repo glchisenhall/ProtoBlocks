@@ -10,24 +10,22 @@ namespace AltX.Managers
     {
         public static bool isBaseBlock;
         public float offset;
-        private GameObject parent;
         private void Awake()
         {
-            parent = gameObject.GetComponentInParent<Collider>().gameObject;
             isBaseBlock = GetBaseValue();
         }
         private void OnMouseDown()
         {
-            if (GameManager.GetIsBuildMode())
-            {
-                BlockSpawnManager.PlaceSelectedBlock(BlockToSpawn, transform.position, transform);
-            }
-            if (GameManager.GetIsPaintMode())
-            {
-                PaintedMaterial = PaintManager.GetBlockPaintMaterial();
-                gameObject.GetComponent<Renderer>().material = PaintedMaterial;
-                defaultMaterial = PaintedMaterial;
-            }
+            //if (GameManager.GetIsBuildMode())
+            //{
+            //    BlockSpawnManager.PlaceSelectedBlock(BlockToSpawn, transform.position, transform);
+            //}
+            //if (GameManager.GetIsPaintMode())
+            //{
+            //    PaintedMaterial = PaintManager.GetBlockPaintMaterial();
+            //    gameObject.GetComponent<Renderer>().material = PaintedMaterial;
+            //    defaultMaterial = PaintedMaterial;
+            //}
         }
         /// <summary>
         /// Activates highlighter material & assigns block to spawn

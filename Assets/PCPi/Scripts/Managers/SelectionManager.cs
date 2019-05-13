@@ -7,8 +7,57 @@
 /// </summary>
 #region /// USING
 using UnityEngine;
+using AltX.Managers;
+using UnityStandardAssets.CrossPlatformInput;
 #endregion
-public class SelectionManager : MonoBehaviour
+namespace PCPi.scripts.Managers
 {
-    // ToDo
+    public class SelectionManager : GameManager
+    {
+        private InputManager inputManager;
+
+        private void Start()
+        {
+            inputManager = gameObject.GetComponent<InputManager>();
+
+        }
+
+        public void LateUpdate()
+        {
+            BlockController blockController;
+            GameObject obj;
+            bool isBase;
+            Ray ray = Camera.main.ScreenPointToRay(CrossPlatformInputManager.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit, 100f))
+            {
+                obj = hit.transform.gameObject;
+                blockController = obj.GetComponent<BlockController>();
+                isBase = (bool)blockController.GetBaseValue();
+                if (CrossPlatformInputManager.GetButton("Fire1") && hit.collider != null)
+                {
+                    if (GetIsBuildMode())
+                    {
+                        BlockSpawnManager.PlaceSelectedBlock(blockController.BlockToSpawn, blockController.transform.position, blockController.transform);
+                    }
+                    if (GetIsPaintMode())
+                    {
+                        blockController.PaintedMaterial = PaintManager.GetBlockPaintMaterial();
+                        blockController.gameObject.GetComponent<Renderer>().material = blockController.PaintedMaterial;
+                        blockController.defaultMaterial = blockController.PaintedMaterial;
+                    }
+                }
+                if (CrossPlatformInputManager.GetButton("Fire2") && hit.collider != null)
+                {
+                    if (!isBase)
+                    {
+                        BlockSpawnManager.BlockDestruct(hit.collider.gameObject);
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+            }
+        }
+    }
 }
