@@ -10,11 +10,15 @@ namespace AltX.Managers
     {
         public static bool isBaseBlock;
         public float offset;
-        private GameObject parent;
+        public GameObject parent;
+
+        public GameObject blockCanvas;
+
         private void Awake()
         {
             parent = gameObject.GetComponentInParent<Collider>().gameObject;
             isBaseBlock = GetBaseValue();
+            blockCanvas.SetActive(false);
         }
         private void OnMouseDown()
         {
@@ -36,7 +40,7 @@ namespace AltX.Managers
         {
             BlockToSpawn = BlockManager.GetSelectedBlock();
             gameObject.GetComponent<Renderer>().material = highlightMaterial;
-
+            blockCanvas.SetActive(true);
         }
         /// <summary>
         /// Deactivates highlighter material
@@ -44,6 +48,7 @@ namespace AltX.Managers
         private void OnMouseExit()
         {
             gameObject.GetComponent<Renderer>().material = defaultMaterial;
+            blockCanvas.SetActive(false);
         }
         public bool GetBaseValue()
         {

@@ -24,6 +24,7 @@ namespace PCPi.scripts.Managers
         #region /// Local Variables
         private Color blockColor;
         private GameObject blockSurface;
+        private GameObject blockBody;
         private Material paintedMaterial;
         #endregion
         #region /// Global Variables
