@@ -31,7 +31,7 @@
   - [Twitch](https://www.twitch.tv/topherlee513)
 
 
-**Gary Chisenhall** - [pcpi.theworkpc.com](https://pcpi.theworkpc.com)
+**Gary Chisenhall** - [pcpi](https://glchisenhall.github.io/)
   - [GitHub](https://github.com/glchisenhall)
   - [Steam](https://steamcommunity.com/id/gchisenhall/)
   - [Facebook](https://www.facebook.com/garyleechisenhalljr)
